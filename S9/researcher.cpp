@@ -6,9 +6,9 @@ using std::endl;
 using std::string;
 
 Researcher::Researcher(string name, string institute, int nr, string researcharea)
-    : m_researcharea{researcharea}
+    : Employee{name,institute,nr}, m_researcharea{researcharea}
 {
-    cout << "Costructing Researcher" << endl;
+    cout << "Costructing Researcher " << this << endl;
 }
 Researcher::~Researcher()
 {
@@ -20,5 +20,5 @@ const string &Researcher::researcharea() const
 }
 string Researcher::classname() const
 {
-    return "Researcher";
+    return "Researcher,"+Employee::classname();
 }

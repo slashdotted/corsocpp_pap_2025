@@ -7,10 +7,11 @@ using std::string;
 
 Lecturer::Lecturer(string name, string institute, int nr,
                    string studies, string course) :
+    Employee{name,institute,nr},
     m_studies{studies},
     m_course{course}
 {
-    cout << "Costructing Lecturer" << endl;
+    cout << "Costructing Lecturer " << this << endl;
 }
 Lecturer::~Lecturer()
 {
@@ -26,5 +27,5 @@ string Lecturer::course() const
 }
 string Lecturer::classname() const
 {
-    return "Lecturer";
+    return "Lecturer,"+Employee::classname();
 }

@@ -11,7 +11,7 @@ Employee::Employee(string name, string institute,
     : m_name{name}, m_institute{institute},
       m_employeenr{nr}
 {
-    cout << "Constructing Employee " << m_name << endl;
+    cout << "Constructing Employee " << m_name << " " << this << endl;
 }
 
 Employee::~Employee()
