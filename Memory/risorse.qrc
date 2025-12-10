@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icone">
+        <file>cab_view.png</file>
+    </qresource>
+</RCC>
